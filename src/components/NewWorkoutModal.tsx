@@ -9,6 +9,7 @@ interface Props {
 export default function NewWorkoutModal({ isOpen, onClose, onSave}: Props) {
   
   const [name, setName] = useState("");
+  const [type, setType] = useState("");
   const [date, setDate] = useState(new Date().toLocaleDateString('en-CA'));
 
   if (!isOpen) return null;
@@ -49,6 +50,16 @@ export default function NewWorkoutModal({ isOpen, onClose, onSave}: Props) {
           
           <div>
             <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Date</label>
+            <input 
+              type="date" 
+              value={date}
+              className="w-full bg-slate-950 border border-slate-800 text-white p-3 rounded-lg focus:outline-none focus:border-orange-500 transition-colors [color-scheme:dark]"
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Type</label>
             <input 
               type="date" 
               value={date}

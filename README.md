@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# TRACK_LOG 🏃
+### Performance Tracking System v1.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern training tracker built for runners and athletes. Log your workouts, track your sets, and visualize your progress over time.
 
-Currently, two official plugins are available:
+Built with **React + TypeScript + Vite + Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Log workouts** — Create training sessions with name and date
+- **Track sets** — Record distance (meters) and time (seconds) for each set
+- **Speed calculation** — Automatic km/h display per set
+- **Training volume chart** — Visualize total meters per session over time
+- **Avg pace chart** — Track your min/km evolution across workouts
+- **Local persistence** — All data saved in localStorage, no backend needed
+- **Edit & delete** — Full control over your workouts and sets
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Tool | Purpose |
+|------|---------|
+| React + TypeScript | UI & type safety |
+| Vite | Dev server & bundler |
+| Tailwind CSS | Styling |
+| Recharts | Data visualization |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Roadmap 👀
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This is a work in progress. Big things coming:
+
+- [ ] More charts and visualizations
+- [ ] Workout summary stats (best set, avg pace per session)
+- [ ] Filter and search workouts
+- [ ] Injury prediction tools powered by training load analysis
+- [ ] Export data (CSV / PDF)
+- [ ] PWA support — use it on your phone like a native app
+
+---
+
+> Still cooking. Stay tuned. 🔥
